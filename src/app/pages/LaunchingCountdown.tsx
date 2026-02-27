@@ -508,22 +508,36 @@ export function LaunchingCountdown() {
 
           {/* Social links */}
           <div style={{ display: "flex", justifyContent: "center", gap: "clamp(20px, 5vw, 30px)", marginBottom: "40px" }}>
-            {["LinkedIn", "Twitter", "Instagram"].map((social) => (
-              <a
-                key={social}
-                href="#"
-                style={{
-                  color: "rgba(255, 255, 255, 0.7)",
-                  textDecoration: "none",
-                  fontSize: "14px",
-                  transition: "color 0.2s",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255, 255, 255, 0.7)")}
-              >
-                {social}
-              </a>
-            ))}
+            <a
+              href="https://www.linkedin.com/in/crestvexa"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "rgba(255, 255, 255, 0.7)",
+                textDecoration: "none",
+                fontSize: "14px",
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255, 255, 255, 0.7)")}
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://x.com/crestvexa"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "rgba(255, 255, 255, 0.7)",
+                textDecoration: "none",
+                fontSize: "14px",
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255, 255, 255, 0.7)")}
+            >
+              X
+            </a>
           </div>
 
           {/* Footer */}
