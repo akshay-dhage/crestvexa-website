@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router";
 import { Outlet } from "react-router";
 import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
-import { LaunchingCountdown } from "./pages/LaunchingCountdown";
 import { Services } from "./pages/Services";
 import { Industries } from "./pages/Industries";
 import { Process } from "./pages/Process";
@@ -18,11 +17,6 @@ import { SoftwareDevelopment } from "./pages/services/SoftwareDevelopment";
 import { Maintenance } from "./pages/services/Maintenance";
 import { NotFound } from "./pages/NotFound";
 
-// Countdown page without header/footer - standalone layout
-function CountdownLayout() {
-  return <LaunchingCountdown />;
-}
-
 // Main app layout with header/footer
 function AppLayout() {
   return (
@@ -35,13 +29,10 @@ function AppLayout() {
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: CountdownLayout,
-  },
-  {
-    path: "/home",
     Component: Layout,
     children: [
       { index: true, Component: Home },
+      { path: "home", Component: Home },
       { path: "services", Component: Services },
       { path: "services/ai-automation", Component: AIAutomation },
       { path: "services/cloud-devops", Component: CloudDevOps },
